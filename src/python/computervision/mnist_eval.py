@@ -6,6 +6,10 @@ from tensorflow.examples.tutorials.mnist import input_data
 import mnist_inference_mlp
 import mnist_train
 
+'''
+best typical codes in practice
+'''
+
 EVAL_INTERVAL_SECS = 20
 
 

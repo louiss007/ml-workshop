@@ -6,6 +6,10 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 import mnist_inference_mlp
 
+'''
+best typical codes in practice
+'''
+
 BATCH_SIZE = 128
 LEARNING_RATE_BASE = 0.8
 LEARNING_RATE_DECAY = 0.99

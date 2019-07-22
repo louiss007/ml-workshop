@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import tensorflow as tf
 
+'''
+best typical codes in practice
+'''
+
 INPUT_NODE = 784
 OUTPUT_NODE = 10
 LAYER1_NODE = 500
