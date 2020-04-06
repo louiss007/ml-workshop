@@ -15,9 +15,9 @@ flags.DEFINE_integer('batch_size', 100, 'Training batch size ')
 flags.DEFINE_float('learning_rate', 0.01, 'Learning rate')
 # 定义分布式参数
 # 参数服务器parameter server节点
-flags.DEFINE_string('ps_hosts', 'louiss007-c1:2220', 'Comma-separated list of hostname:port pairs')
+flags.DEFINE_string('ps_hosts', 'louiss007-c1:2221', 'Comma-separated list of hostname:port pairs')
 # 两个worker节点
-flags.DEFINE_string('worker_hosts', 'louiss007-c2:2221,louiss007-c3:2222',
+flags.DEFINE_string('worker_hosts', 'louiss007-c2:2221,louiss007-c3:2221',
                     'Comma-separated list of hostname:port pairs')
 # 设置job name参数
 flags.DEFINE_string('job_name', None, 'job name: worker or ps')
