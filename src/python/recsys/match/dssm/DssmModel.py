@@ -100,10 +100,11 @@ class DssmModel(object):
         y = self.inference(x_tag_batch, x_doc_batch)
         if not is_train:
             return y, None, None
-        cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(
-            logits=y, labels=tf.argmax(train_y_batch, 1))
+        # cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(
+        cross_entropy = tf.nn.softmax_cross_entropy_with_logits(
+            labels=tf.argmax(train_y_batch, 1), logits=y)
         cross_entropy_mean = tf.reduce_mean(cross_entropy)
-        loss = cross_entropy_mean + tf.add_n(tf.get_collection('losses'))
+        loss = cross_entropy_mean # + tf.add_n(tf.get_collection('losses'))
         train_op = tf.train.GradientDescentOptimizer(self.learning_rate) \
             .minimize(loss)
         return y, loss, train_op

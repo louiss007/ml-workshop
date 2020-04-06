@@ -9,9 +9,9 @@ def read_multi_lines(infile, num):
             data = fi.read(buffer_size)
             num_lines = data.split('\n')[:num]
             fi.seek(len(num_lines[0]), os.SEEK_SET)
-            print "======"
+            print("======")
             # print fi.tell()
-            print "\n".join(num_lines)
+            print("\n".join(num_lines))
             if not fi.read(buffer_size):
                 break
 

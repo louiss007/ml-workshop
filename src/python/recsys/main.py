@@ -1,6 +1,6 @@
 import time
 from match.config.DssmConfig import *
-from match.model_run import *
+from run.match_run import *
 import codecs
 
 word2id = dict()
